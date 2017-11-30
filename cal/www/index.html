@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class = "with-statusbar-overlay">
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+      <meta name = "apple-mobile-web-app-capable" content = "yes" />
+      <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+      <title>Calendar</title>
+      <link rel = "stylesheet" 
+         href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+      <link rel = "stylesheet" 
+         href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+      <link rel = "stylesheet" 
+         href = "custom.css" />
+   </head>
+
+   <body>
+      <div class = "views">
+         <div class = "view view-main">
+            <div class = "pages">
+               <div data-page = "home" class = "page navbar-fixed">
+                  
+                  <div class = "navbar">
+                     <div class = "navbar-inner">
+                        <div class = "left"> </div>
+                        <div class = "center">Calendar</div>
+                        <div class = "right"> </div>
+                     </div>
+                  </div>
+                  
+                  <div class = "page-content">
+                     <div class = "content-block-title">Default calendar setup</div>
+                     
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select a date" 
+                                          readonly id = "calendar-default" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Custom date format calendar</div>
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select a date" 
+                                          readonly id = "calendar-date-format" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Multiple values calendar</div>
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select multiple dates" 
+                                          readonly id = "calendar-multiple" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Range picker calendar</div>
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select date range" 
+                                          readonly id = "calendar-range" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Calendar with events (Additional dot is marked on calendar day from today to weeklater.)</div>
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select date" 
+                                          readonly id = "calendar-events" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Disabled dates (Today to weeklater)</div>
+                     <div class = "list-block">
+                        <ul>
+                           <li>
+                              <div class = "item-content">
+                                 <div class = "item-inner">
+                                    <div class = "item-input">
+                                       <input type = "text" placeholder = "Select date" 
+                                          readonly id = "calendar-disabled" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class = "content-block-title">Inline with custom toolbar</div>
+                     <div class = "content-block">
+                        <div style = "padding:0; margin-right:-15px; width:auto" class = "content-block-inner">
+                           <div id = "calendar-inline-container"></div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class = "page">
+<div class = "page-content messages-content">
+   <div class = "messages">
+      <!-- Defines the date stamp -->
+      <div class = "messages-date">Monday, Apr 26 <span>10:30</span></div>
+      
+      <!-- Displays the sent message and by default, it will be in green color on right side -->
+      <div class = "message message-sent">
+         <!-- Define the text with bubble type -->
+         <div class = "message-text">Hello</div>
+      </div>
+      
+      <!-- Displays the another sent message -->
+      <div class = "message message-sent">
+         <!-- Define the text with bubble type -->
+         <div class = "message-text">How are you?</div>
+      </div>
+      
+      <!-- Displays the received message and by default, it will be in grey color on left side -->
+      <div class = "message message-with-avatar message-received">
+         <!-- Provides sender name -->
+         <div class = "message-name">Smith</div>
+         <!--  Define the text with bubble type -->
+         <div class = "message-text">I am fine, thanks</div>
+         <!-- Defines the another date stamp -->
+         <div class = "messages-date">Tuesday, April 28 <span>11:16</span></div>
+      </div>
+      
+   </div>
+</div>
+      
+      <script type = "text/javascript" 
+         src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+         
+      <script>
+         var myApp = new Framework7();
+
+         // Default Calendar
+         var calendarDefault = myApp.calendar ({
+            input: '#calendar-default',
+         });
+         
+         // With custom date format
+         var calendarDateFormat = myApp.calendar({
+            input: '#calendar-date-format',
+            dateFormat: 'DD, dd MM, yyyy'
+         });
+         
+         // With multiple values
+         var calendarMultiple = myApp.calendar ({
+            input: '#calendar-multiple',
+            dateFormat: ' DD dd M yyyy',
+            multiple: true
+         });
+         
+         // Range Picker
+         var calendarRange = myApp.calendar ({
+            input: '#calendar-range',
+            dateFormat: 'dd M yyyy',
+            rangePicker: true
+         });
+         
+         // With events
+         var today = new Date();
+         var weekLater = new Date().setDate(today.getDate() + 7);
+         var calendarEvents = myApp.calendar ({
+            input: '#calendar-events',
+            dateFormat: 'M dd yyyy',
+            events: {
+               from: today,
+               to: weekLater
+            }
+         });
+         
+         // Disabled
+         var today = new Date();
+         var weekLater = new Date().setDate(today.getDate() + 7);
+         
+         var calendarDisabled = myApp.calendar ({
+            input: '#calendar-disabled',
+            dateFormat: 'M dd yyyy',
+            disabled: {
+               from: today,
+               to: weekLater
+            }
+         });
+         
+         // Inline with custom toolbar
+         var $$ = Dom7;
+         var monthNames = [
+            'January', 
+            'February', 
+            'March', 
+            'April', 
+            'May', 
+            'June', 
+            'July', 
+            'August' , 
+            'September' , 
+            'October', 
+            'November', 
+            'December'
+         ];
+         
+         var calendarInline = myApp.calendar ({
+            container: '#calendar-inline-container',
+            value: [new Date()],
+            weekHeader: false,
+            toolbarTemplate:
+               '<div class = "toolbar calendar-custom-toolbar">' +
+                  '<div class = "toolbar-inner">' +
+                     '<div class = "left">' +
+                        '<a href = "#" class = "link icon-only"><i class = "icon icon-back"></i></a>' +
+                     '</div>' +
+                     '<div class = "center"></div>' +
+                  
+                     '<div class = "right">' +
+                        '<a href = "#" class = "link icon-only"><i class = "icon icon-forward"></i></a>' +
+                     '</div>' +
+                  '</div>' +
+               '</div>',
+               
+            onOpen: function (p) {
+               $$('.calendar-custom-toolbar .center').text(monthNames[p.currentMonth] +', ' + p.currentYear);
+               $$('.calendar-custom-toolbar .left .link').on('click', function () {
+                  calendarInline.prevMonth();
+               });
+                  
+               $$('.calendar-custom-toolbar .right .link').on('click', function () {
+                  calendarInline.nextMonth();
+               });
+            },
+               
+            onMonthYearChangeStart: function (p) {
+               $$('.calendar-custom-toolbar .center').text(monthNames[p.currentMonth] +', ' + p.currentYear);
+            }
+         });
+      </script>
+   </body>
+
+</html>
